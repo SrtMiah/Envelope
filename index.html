@@ -1,16 +1,44 @@
-<!-- Estrutura do envelope com botão -->
-<div class="night"></div>
-<div class="text">
-  <div class="wrapper">
-    <div class="lid one"></div> <!-- Parte superior do envelope (tampa) -->
-    <div class="lid two"></div> <!-- Parte intermediária da tampa -->
-    <div class="envelope"></div> <!-- Parte inferior do envelope -->
-    <div class="letter"> <!-- Cartinha com a mensagem -->
-      <p>Feliz Aniversário, meu amor!❤️</p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Envelope Animado</title>
+
+  <!-- Conecta o arquivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Elemento de fundo decorativo -->
+  <div class="night"></div>
+
+  <!-- Texto e estrutura do envelope -->
+  <div class="text">
+    <div class="wrapper">
+      
+      <!-- Tampa superior do envelope -->
+      <div class="lid one"></div>
+      
+      <!-- Tampa inferior do envelope -->
+      <div class="lid two"></div>
+      
+      <!-- Parte de trás do envelope -->
+      <div class="envelope"></div>
+
+      <!-- Carta que aparece de dentro do envelope -->
+      <div class="letter">
+        <p>Feliz Aniversário, meu amor! ❤️</p>
+      </div>
+    </div>
+
+    <!-- Botões para abrir e fechar o envelope -->
+    <div class="buttons">
+      <button id="openBtn">Abrir</button>
+      <button id="closeBtn" style="display: none;">Fechar</button>
     </div>
   </div>
-  <div class="buttons">
-    <button id="openBtn">Abrir!</button> <!-- Botão para abrir o envelope -->
-    <button id="closeBtn" style="display: none;">Fechar!</button> <!-- Botão para fechar -->
-  </div>
-</div>
+
+  <!-- Conecta o arquivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>

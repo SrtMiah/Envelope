@@ -1,35 +1,21 @@
-// Captura os botões e elementos visuais do envelope e carta
-const openBtn = document.getElementById('openBtn'); // Botão "Open"
-const closeBtn = document.getElementById('closeBtn'); // Botão "Close"
-const lidOne = document.querySelector('.lid.one'); // Tampa do envelope (parte superior)
-const letter = document.querySelector('.letter'); // Carta que aparece de dentro do envelope
+// Captura os elementos do DOM (HTML)
+const openBtn = document.getElementById('openBtn'); // Botão "Abrir"
+const closeBtn = document.getElementById('closeBtn'); // Botão "Fechar"
+const lidOne = document.querySelector('.lid.one'); // Tampa superior
+const letter = document.querySelector('.letter'); // A carta
 
-// Quando o botão "Open" for clicado...
+// Quando clica em "Abrir"
 openBtn.addEventListener('click', () => {
-  // Inclina a tampa superior para "abrir" o envelope
-  lidOne.style.transform = 'rotateX(-120deg)';
-  
-  // Move a carta para cima, para fora do envelope
-  letter.style.transform = 'translateY(0)';
-
-  // Esconde o botão "Open"
-  openBtn.style.display = 'none';
-
-  // Mostra o botão "Close"
-  closeBtn.style.display = 'inline-block';
+  lidOne.style.transform = 'rotateX(-120deg)'; // Abre a tampa
+  letter.style.transform = 'translateY(0)';    // Puxa a carta para cima
+  openBtn.style.display = 'none';              // Esconde o botão abrir
+  closeBtn.style.display = 'inline-block';     // Mostra o botão fechar
 });
 
-// Quando o botão "Close" for clicado...
+// Quando clica em "Fechar"
 closeBtn.addEventListener('click', () => {
-  // Reposiciona a tampa na posição original (fechada)
-  lidOne.style.transform = 'rotateX(0deg)';
-  
-  // Desce a carta de volta para dentro do envelope
-  letter.style.transform = 'translateY(100%)';
-
-  // Esconde o botão "Close"
-  closeBtn.style.display = 'none';
-
-  // Mostra novamente o botão "Open"
-  openBtn.style.display = 'inline-block';
+  lidOne.style.transform = 'rotateX(0deg)';     // Fecha a tampa
+  letter.style.transform = 'translateY(100%)';  // Esconde a carta de novo
+  closeBtn.style.display = 'none';              // Esconde botão fechar
+  openBtn.style.display = 'inline-block';       // Mostra botão abrir
 });
