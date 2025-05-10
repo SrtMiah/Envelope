@@ -1,0 +1,98 @@
+/* Fundo escuro com estrelas */
+.night {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#000015, #000);
+  z-index: -1;
+}
+
+/* Container principal */
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Envelope animado */
+.wrapper {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+/* Parte inferior do envelope */
+.envelope {
+  width: 100%;
+  height: 200px;
+  background: pink;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Tampa superior (fechamento do envelope) */
+.lid.one, .lid.two {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: #e75480;
+  border-radius: 10px 10px 0 0;
+  transform-origin: bottom;
+  z-index: 2;
+  transition: transform 0.6s ease;
+}
+
+.lid.one {
+  top: 0;
+  transform: rotateX(0deg);
+}
+
+.lid.two {
+  top: 0;
+  z-index: 3;
+}
+
+/* Cartinha interna */
+.letter {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  width: 250px;
+  height: 150px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
+  text-align: center;
+  font-size: 1.2em;
+  color: #c2185b;
+  font-weight: bold;
+}
+
+/* Botões */
+.buttons {
+  text-align: center;
+}
+
+button {
+  background: #e75480;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d1406f;
+}
