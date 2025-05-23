@@ -1,23 +1,26 @@
-// Aguarda o carregamento completo do HTML
 document.addEventListener('DOMContentLoaded', () => {
-  const openBtn = document.getElementById('openBtn');   // Botão "Abrir"
-  const closeBtn = document.getElementById('closeBtn'); // Botão "Fechar"
-  const lidOne = document.querySelector('.lid.one');    // Tampa superior
-  const letter = document.querySelector('.letter');     // Carta
+  const openBtn = document.getElementById('openBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  const lidOne = document.querySelector('.lid.one');
+  const letter = document.querySelector('.letter');
 
-  // Ação ao clicar em "Abrir"
   openBtn.addEventListener('click', () => {
-    lidOne.style.transform = 'rotateX(-120deg)';  // Abre a tampa
-    letter.style.transform = 'translateY(0)';     // Mostra a carta
-    openBtn.style.display = 'none';               // Esconde botão abrir
-    closeBtn.style.display = 'inline-block';      // Mostra botão fechar
+    console.log("Botão Abrir clicado!");
+    lidOne.style.transform = 'rotateX(-120deg)';
+    setTimeout(() => {
+      letter.style.transform = 'translateY(0)';
+    }, 300);
+    openBtn.style.display = 'none';
+    closeBtn.style.display = 'inline-block';
   });
 
-  // Ação ao clicar em "Fechar"
   closeBtn.addEventListener('click', () => {
-    lidOne.style.transform = 'rotateX(0deg)';       // Fecha a tampa
-    letter.style.transform = 'translateY(100%)';    // Esconde a carta
-    closeBtn.style.display = 'none';                // Esconde botão fechar
-    openBtn.style.display = 'inline-block';         // Mostra botão abrir
+    console.log("Botão Fechar clicado!");
+    letter.style.transform = 'translateY(100%)';
+    setTimeout(() => {
+      lidOne.style.transform = 'rotateX(0deg)';
+    }, 300);
+    closeBtn.style.display = 'none';
+    openBtn.style.display = 'inline-block';
   });
 });
