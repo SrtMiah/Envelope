@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const lidOne = document.querySelector('.lid.one');
   const letter = document.querySelector('.letter');
 
+  // Garante que a carta esteja oculta ao carregar a página
+  letter.style.transform = 'translateY(100%)';
+
   openBtn.addEventListener('click', () => {
     console.log("Botão Abrir clicado!");
     lidOne.style.transform = 'rotateX(-120deg)';
